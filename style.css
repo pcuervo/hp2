@@ -357,7 +357,7 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
         .lightbox-container .lightbox-media h2 { font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; }
 
 /* esconder video tendencias temporalmente */
-#menu_segmentos ul li:first-child { display:none; }
+/*#menu_segmentos ul li:first-child { display:none; }*/
 
 /* pantalla grande ----------- */
 @media only screen
