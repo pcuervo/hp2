@@ -146,7 +146,6 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 
 .main-content { width: 82%; }
 .seccion-segmento { width: 98%; margin: 2% auto 0 auto; position: relative; overflow: hidden; }
-.seccion-segmento.video{ padding-bottom: 56.25%; }
 .seccion-segmento video{ width: 100%; height: auto; }
 
 			.seccion-segmento > ul { list-style:none; margin: 3%; }
@@ -567,6 +566,9 @@ and (max-width : 620px) {
 @media only screen
 and (max-width : 480px) {
 
+	.no-480{ display: none !important; }
+	.solo-480{ display: block; }
+
 	/* MAIN */
 	header .logo img { width: 75px; height: 75px; }
 	header h1 { height: 75px; line-height: 75px; font-size: 20px; }
@@ -651,10 +653,5 @@ and (max-width : 320px) {
 	.panel-historias .regresa p{ line-height: 25px; }
 
 	.menu-horizontal { width: 90%; background: #fff; padding-top: 5px; position: fixed; bottom: 0; z-index: 10; }
-		.menu-horizontal li {  }
-		.menu-horizontal li a {  }
-		.menu-horizontal li a:hover {  }
-			.menu-horizontal li img {  }
-			.menu-horizontal li p { }
 
 }
