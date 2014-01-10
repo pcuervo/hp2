@@ -146,6 +146,7 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 
 .main-content { width: 82%; }
 .seccion-segmento { width: 98%; margin: 2% auto 0 auto; position: relative; overflow: hidden; }
+.seccion-segmento.video{ padding-bottom: 56.25%; }
 .seccion-segmento video{ width: 100%; height: auto; }
 
 			.seccion-segmento > ul { list-style:none; margin: 3%; }
