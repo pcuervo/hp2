@@ -161,12 +161,7 @@
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <video controls >
-                          <source src="videos/20000.webm" type='video/webm; codecs="vp8, vorbis"' />
-                          <source src="videos/20000.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                          <source src="videos/20000.ogv" type='video/ogg; codecs="theora, vorbis"' />
-                          Video tag not supported. Download the video <a href="movie.webm">here</a>.
-                        <video>
+                        <iframe src="http://player.vimeo.com/video/84280367?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo 20000</h2>
                     <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
@@ -250,7 +245,7 @@
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		//callPlayer('yt-video', 'stopVideo');
 	</script>
 </body>
 </html>

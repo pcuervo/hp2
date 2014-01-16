@@ -159,17 +159,12 @@
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <video controls >
-                          <source src="videos/ws6600p.webm" type='video/webm; codecs="vp8, vorbis"' />
-                          <source src="videos/ws6600p.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                          <source src="videos/ws6600p.ogv" type='video/ogg; codecs="theora, vorbis"' />
-                          Video tag not supported. Download the video <a href="movie.webm">here</a>.
-                        <video>
+                        <iframe src="http://player.vimeo.com/video/84279837?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo WS6600p</h2>
-                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <!-- <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
                         <img src="images/cerrar.png" />
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div class="menu-vertical right">
@@ -245,11 +240,12 @@
     </div><!--container-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jRespond.js"></script>
+    <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		//callPlayer('yt-video', 'stopVideo');
 	</script>
 </body>
 </html>

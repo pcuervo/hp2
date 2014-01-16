@@ -419,8 +419,9 @@ $( document ).ready(function() {
 
 	//Fitvids
 	$(function(){
-		$('.video').fitVids();
-		//jQuery('#videos').fitVids();
+		if ( $('.video').length > 0 ){
+			$('.video').fitVids();
+		}
 	});
 
 
