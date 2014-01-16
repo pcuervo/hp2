@@ -656,3 +656,19 @@ and (max-width : 320px) {
 	.menu-horizontal { width: 90%; background: #fff; padding-top: 5px; position: fixed; bottom: 0; z-index: 10; }
 
 }
+
+@media only screen
+and (max-width: 1024px)
+and (min-height: 1024px) {
+	.content{ width: 90%; margin: 0 auto 30% auto; }
+
+	.panel-historias .regresa p{ line-height: 25px; }
+
+	.menu-horizontal { width: 90%; display:block; background: #fff; padding-top: 5px; position: fixed; bottom: 0; z-index: 10; list-style:none; }
+	.menu-vertical{ display: none;}
+	.menu-horizontal li { width: 19%;  margin: 0 0.5%; float:left; position: relative; }
+	.menu-horizontal li a { width: 100%; padding: 1%; color: #fff; text-decoration: none; text-align: center; background: #e95446; display:block;  }
+	.menu-horizontal li a:hover { background: #c03531; }
+	.menu-horizontal li img { width: 80%; height: auto; margin: 10px auto; }
+	.menu-horizontal li p { display: none; }
+}
