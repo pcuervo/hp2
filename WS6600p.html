@@ -158,13 +158,13 @@
             </div><!-- content -->
             <div class="lightbox-container">
                 <div class="lightbox-media">
-                    <div class="frame-video" id="yt-video">
-                        <iframe src="http://player.vimeo.com/video/84279837?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="frame-video" id="vimeoWrap">
+                    	<iframe src="http://player.vimeo.com/video/84279837?api=1&byline=0&amp;portrait=0&amp;color=ffffff" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo WS6600p</h2>
-                    <!-- <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <a href="#">
                         <img src="images/cerrar.png" />
-                    </a> -->
+                    </a>
                 </div>
             </div>
             <div class="menu-vertical right">
@@ -236,16 +236,18 @@
                     </a>
                 </li>
             </ul> <!-- menu-horizontal -->
+
         </div><!-- main -->
     </div><!--container-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jRespond.js"></script>
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
+    <script src="js/froogaloop.js"></script>
     <script>
 		slider();
         lightboxIFrame();
-		//callPlayer('yt-video', 'stopVideo');
+        stopVimeo();
 	</script>
 </body>
 </html>
