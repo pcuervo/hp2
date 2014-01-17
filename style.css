@@ -210,8 +210,8 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 .contenido-video { width: 60%; margin: 2% auto 0 auto; position: relative; padding-bottom: 36.25%; overflow: hidden; }
 .contenido-video .frame-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 .contenido-video .frame-video iframe{ height: 100% !important; position: absolute; top: 0; left: 0; width: 100%; }
-.frame-img { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-.frame-img img{ width: 100%; height: auto; position: absolute; top: 0; left: 0; }
+.frame-img { position: relative; overflow: hidden; }
+.frame-img img{ width: 100%; height: auto; }
 .contenido-slider-historias { width:100%; margin-top:0; padding-left:2%; margin-left:0; }
 .contenido-slider-historias .slider { width:90%; position: relative; }
 .contenido-slider-historias img { width:80%; display:none; margin-left:10%; }
@@ -350,20 +350,20 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 
 /* LIGHTBOX VIDEOS */
 .lightbox-container { position: fixed; width:100%; height:100%; top:0; left:0; background-color:rgba(0, 0, 0, 0.5); z-index: 90; overflow:hidden; display:none; }
-    .lightbox-container .lightbox-media { width:60%; margin:2% auto; padding: 2%; background: #00a0dd; display: block; position:relative;
+    .lightbox-container .lightbox-media { width:60%; margin:2% auto; padding: 2%; background: #00a0dd; display: block; position:relative; overflow: hidden;
 			border-top-right-radius: 15px;
 			border-bottom-left-radius: 15px;
 			-webkit-border-top-right-radius: 15px;
 			-webkit-border-bottom-left-radius: 15px;
 			-moz-border-radius-topright: 15px;
 			-moz-border-radius-bottomleft: 15px;}
-        .lightbox-media a { width:50px; height:50px; display:block; float:right; margin-top: -30px;}
+        .lightbox-media a { display:block; width:7%; margin-top: 2%; float:right;}
             .lightbox-media a img { width:100%; height:auto;}
         .lightbox-container .lightbox-media video { width:100%; height:auto;}
         .lightbox-container .frame-video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .lightbox-container .frame-video iframe{ height: 100% !important; position: absolute; top: 0; left: 0; width: 100%; }
         .lightbox-container .lightbox-media iframe { width:100%; height:auto; }
-        .lightbox-container .lightbox-media h2 { font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; }
+        .lightbox-container .lightbox-media h2 { display: inline-block; width: 90%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
 
 /* esconder video tendencias temporalmente */
 /*#menu_segmentos ul li:first-child { display:none; }*/
@@ -656,10 +656,7 @@ and (max-width : 480px) {
 
 	/* LIGHTBOX VIDEOS */
 	.lightbox-container .lightbox-media { width:95%; }
-	.lightbox-media a { width:30px; height:30px; display:block; float:right; margin-top: -30px;}
-	.lightbox-media a img { width:100%; height:auto;}
 	.lightbox-container .lightbox-media h2 { font-size:18px; margin-top: 0; line-height:26px; padding-top:10px; }
-
 
 }
 
