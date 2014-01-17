@@ -94,9 +94,15 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 .subtitulo img{ width: 80px; height:80px; margin: 10px; }
 .subtitulo h2 { margin: 10px 0 10px 20px; font-family: 'hp_bold'; font-size: 32px; line-height:80px; }
 
-.regresa { width: 90%; height:auto; margin: 10px 0; display:block; }
-	.regresa img{ width: 16%; height: auto; border: none; float: left; }
-	.regresa p{ width: 80%; margin: 0; float: right; color: #000; }
+.regresa { display:block; width: 90%; height:auto; margin: 10px 0; padding: 10px; background: url('images/regresa-mediana.png') no-repeat left center #00A0DD;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomleft: 15px;
+}
+.regresa p{ width: 76%; margin: 0; float: right; color: #fff; }
 
 
 /********************
@@ -494,6 +500,10 @@ and (max-width : 767px) {
 	.menu-habilitadores ul{  }
 	.menu-habilitadores ul li{ width: 20%; height: 64px; float: left; }
 	.menu-habilitadores ul li a{ padding: 5%; font-size: 14px; }
+
+	.regresa { padding: 5px; background: url('images/regresa-chica.png') no-repeat left center #00A0DD;}
+	.regresa p{ width: 76%; margin: 0; float: right; color: #fff; }
+
 
 }
 
