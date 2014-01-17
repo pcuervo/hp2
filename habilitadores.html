@@ -144,9 +144,7 @@
                                 <img src="images/graphic_arts/page-2.jpg" class="slider-item"  id="graphic-3" />
                                 <img src="images/graphic_arts/page-3.jpg" class="slider-item"  id="graphic-4" />
                                 <img src="images/graphic_arts/page-4.jpg" class="slider-item"  id="graphic-5" />
-                                <div class="video1 slider-item" id="1" >
-                                    <iframe width="560" height="315" src="http://www.youtube.com/embed/717_QHgvX88?rel=0" frameborder="0" allowfullscreen id="graphic-6"></iframe>
-                                </div>
+                                
                                 <a href="#" class="flecha-izq left"><img src="images/prev.png" alt="Previous"></a>
                                 <a href="#" class="flecha-der right"><img src="images/next.png" alt="Next"></a>
                                 <ul class="control-slider control-slider-graphic">
@@ -155,13 +153,23 @@
                                     <li><a href="#" id="control-3"></a></li>
                                     <li><a href="#" id="control-4"></a></li>
                                     <li><a href="#" id="control-5"></a></li>
-                                    <li><a href="#" id="control-6"></a></li>
                                 </ul>
                             </div>
                         </div>
+                        <a href="#" id="videoHabilitadores">Ver video</a>
                     </div>
                 </div>
-
+                <div class="lightbox-container">
+                <div class="lightbox-media">
+                    <div class="frame-video" id="yt-video">
+                        <iframe src="http://www.youtube.com/embed/717_QHgvX88?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h2>Graphic Arts</h2>
+                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                        <img src="images/cerrar.png" />
+                    </a>
+                </div>
+            </div> <!-- lightbox -->
             </div><!-- content -->
             <div class="menu-vertical right">
                 <ul>
@@ -243,7 +251,9 @@
 		slider("servicio");
 		slider("soporte");
 		slider("dscoop");
-		sliderCombinado("graphic");
+		slider("graphic");
+        lightboxHabilitadores();
+        callPlayer('yt-video', 'stopVideo');
 	</script>
 </body>
 </html>
