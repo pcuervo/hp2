@@ -313,7 +313,7 @@ $( document ).ready(function() {
 			}
 			limpiaControl();
 			$(this).addClass("activo");
-			limpiaImg();
+			limpiaCombinado();
 			$(sl +" img#" + id).addClass("activo");
 		});
 		$(sl +" .flecha-der").click(function() {
@@ -323,7 +323,7 @@ $( document ).ready(function() {
 			} else {
 				var activo = id.replace(idSlider + "-", "");
 			}
-			limpiaImg();
+			limpiaCombinado();
 			limpiaControl();
 			activo = parseInt(activo) + 1;
 			if(activo > numImg) activo = 1;
@@ -342,7 +342,7 @@ $( document ).ready(function() {
 			} else {
 				var activo = id.replace(idSlider + "-", "");
 			}
-			limpiaImg();
+			limpiaCombinado();
 			limpiaControl();
 			activo = parseInt(activo) - 1;
 			if(activo < 1) activo = numImg;
@@ -357,8 +357,9 @@ $( document ).ready(function() {
 		function limpiaControl() {
 			$(sl +" .control-slider a").removeClass("activo");
 		}
-		function limpiaImg() {
+		function limpiaCombinado() {
 			$(sl +" img").removeClass("activo");
+			$(sl + " iframe").removeClass("activo")
 		}
 	}
 

@@ -278,6 +278,9 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 
 .contenido-slider img { width:80%; display:none; margin: auto; }
 .contenido-slider img.activo { display:block; }
+.slider .video1 { width:80%; display:none; margin: auto; }
+.slider .video1.activo { display:block; }
+.slider .video1 iframe { display:block; width:100%; }
 
 .contenido-slider iframe { width:80%; display:none; margin: auto; display: block; }
 .contenido-slider iframe.activo { display:block; }
@@ -682,10 +685,9 @@ and (max-width : 320px) {
 }
 
 @media only screen
-and (max-width: 1024px)
-and (min-height: 1024px) {
-	.content{ width: 90%; margin: 0 auto 30% auto; }
-
+and (min-height: 1000px) 
+and (min-width: 800px) {
+	.content{ width: 100%; margin: 0 auto 30% auto; }
 	.panel-historias .regresa p{ line-height: 25px; }
 
 	.menu-horizontal { width: 90%; display:block; background: #fff; padding-top: 5px; position: fixed; bottom: 0; z-index: 10; list-style:none; }
