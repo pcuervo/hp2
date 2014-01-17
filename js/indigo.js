@@ -424,7 +424,14 @@ $( document ).ready(function() {
 		}
 	});
 
-
+	// Videos Vimeo
+	function stopVimeo() {
+		$('.lightbox-media a').click(function() {
+	   		vimeoWrap = $('#vimeoWrap');
+	   		vimeoWrap.html( vimeoWrap.html() );
+		});
+	}
+	
 	// API YouTube
 	function callPlayer(frame_id, func, args) {
 		if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
@@ -503,6 +510,9 @@ $( document ).ready(function() {
 			:
 				(add ? window.attachEvent : window.detachEvent)('onmessage', listener);
 		}
+
+
+
 	}
 
 
