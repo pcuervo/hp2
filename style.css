@@ -239,7 +239,7 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 .prensas table { width: 80%; margin-left:2%; margin-top:5%; font-family:'hp_bold'; color:#FFF; text-align:center; border:1px solid #FFF; }
 	.prensas table, .prensas table th, .prensas table td { border:1px solid #FFF; }
 	.prensas td.titulo { background-color: #C6C8CA; color:#52565A; font-size:16px; line-height:24px; }
-		.prensas td a { width: 100%; display:block; color:#FFF; text-decoration:none; background-color:#00A0DD; font-size:16px; line-height:30px; text-align:left; padding-left: 3%; font-family:'hp_regular'; margin-bottom:5px; }
+		.prensas td a { width: 100%; display:block; color:#FFF; text-decoration:none; background-color:#00A0DD; font-size:16px; line-height:30px; text-align:left; padding: 10%; font-family:'hp_regular'; margin-bottom:5px; }
 		.prensas td a:hover { background-color:#2474A0; }
 		.prensas td a.activo { background-color:#2474A0; cursor:default; }
 
