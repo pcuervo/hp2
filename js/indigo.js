@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	// SEGMENTOS
 	var menuIzq = document.getElementById("menu_segmentos");
 	if ( menuIzq != null ) {
-		muestraInfo("soluciones"); // mostrar por default pestaña "aplicaciones en los segmentos"
+		muestraInfo("tendencias"); // mostrar por default pestaña "aplicaciones en los segmentos"
 		menuIzq.addEventListener("click", cambiaTab, false); // detecta que opción del menú izquierdo fue "clickeada" y cambia la info
 	}
 
