@@ -295,74 +295,6 @@ $( document ).ready(function() {
 		}
 	}
 
-	function sliderCombinado(idSlider) {
-		if(idSlider == null){
-			var sl = ".slider";
-			var cs = ".control-slider";
-		} else {
-			var sl = ".slider-" + idSlider;
-			var cs = ".control-slider-" + idSlider;
-		}
-		var numImg = $(sl + " " + cs + " li").length;
-		$(sl + " " + cs + " a").click(function(){
-			var id = $(this).attr("id");
-			if(idSlider == null){
-				id = id.replace("control-", "");
-			} else {
-				id = id.replace("control-", idSlider + "-");
-			}
-			limpiaControl();
-			$(this).addClass("activo");
-			limpiaCombinado();
-			$(sl +" img#" + id).addClass("activo");
-		});
-		$(sl +" .flecha-der").click(function() {
-			var id = $(sl +" img.activo").attr("id");
-			if(idSlider == null) {
-				var activo = $(sl +" img.activo").attr("id");
-			} else {
-				var activo = id.replace(idSlider + "-", "");
-			}
-			limpiaCombinado();
-			limpiaControl();
-			activo = parseInt(activo) + 1;
-			if(activo > numImg) activo = 1;
-
-			if(idSlider == null){
-				$(sl +" img#" + activo).addClass("activo");
-			} else {
-				$(sl +" img#" + idSlider + "-" + activo).addClass("activo");
-			}
-			$(sl +" .control-slider a#control-" + activo).addClass("activo");
-		});
-		$(sl +" .flecha-izq").click(function() {
-			var id = $(sl +" img.activo").attr("id");
-			if(idSlider == null) {
-				var activo = $(sl +" img.activo").attr("id");
-			} else {
-				var activo = id.replace(idSlider + "-", "");
-			}
-			limpiaCombinado();
-			limpiaControl();
-			activo = parseInt(activo) - 1;
-			if(activo < 1) activo = numImg;
-			if(idSlider == null){
-				$(sl +" img#" + activo).addClass("activo");
-			} else {
-				$(sl +" img#" + idSlider + "-" + activo).addClass("activo");
-			}
-			$(sl +" .control-slider a#control-" + activo).addClass("activo");
-		});
-
-		function limpiaControl() {
-			$(sl +" .control-slider a").removeClass("activo");
-		}
-		function limpiaCombinado() {
-			$(sl +" img").removeClass("activo");
-			$(sl + " iframe").removeClass("activo")
-		}
-	}
-
 	function sliderVid(idSlider) {
 		var sl = ".slider-vid";
 		var cs = ".control-slider-vid";
@@ -444,6 +376,21 @@ $( document ).ready(function() {
 
 	function lightboxIFrame() {
 	    $(".botones-prensa li a#video").click(function () {
+
+	        $(".lightbox-container").css("display", "block");
+
+	        $(".lightbox-media a").click(function () {
+	            $(".lightbox-container").css("display", "none");
+	        });
+
+	        $('body').animate(
+	    		{ scrollTop:0 }, '500'
+	    	);
+	    });
+	}
+
+	function lightboxHabilitadores() {
+	    $("a#videoHabilitadores").click(function () {
 
 	        $(".lightbox-container").css("display", "block");
 

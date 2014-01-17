@@ -368,8 +368,9 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
         .lightbox-container .lightbox-media iframe { width:100%; height:auto; }
         .lightbox-container .lightbox-media h2 { display: inline-block; width: 90%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
 
-/* esconder video tendencias temporalmente */
-/*#menu_segmentos ul li:first-child { display:none; }*/
+/* HABILITADORES */
+#videoHabilitadores{ width: 190px; height: 37px; display:block; color:#FFF; text-decoration:none; background-color:#00A0DD; font-size:18px; line-height:18px; text-align:left; padding: 1%; font-family:'hp_bold'; }
+
 
 /* pantalla grande ----------- */
 @media only screen
@@ -506,6 +507,8 @@ and (max-width : 767px) {
 	.menu-habilitadores ul{  }
 	.menu-habilitadores ul li{ width: 20%; height: 64px; float: left; }
 	.menu-habilitadores ul li a{ padding: 5%; font-size: 14px; }
+
+
 
 	.regresa { padding: 5px; background: url('images/regresa-chica.png') no-repeat left center #00A0DD;}
 	.regresa p{ width: 76%; margin: 0; float: right; color: #fff; }
@@ -687,6 +690,7 @@ and (max-width : 320px) {
 @media only screen
 and (min-height: 1000px)
 and (min-width: 800px) {
+
 	.content{ width: 100%; margin: 0 auto 30% auto; }
 	.panel-historias .regresa p{ line-height: 25px; }
 
