@@ -261,7 +261,12 @@
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		$(document).ready(function(e) {
+            $("#video").click(function(){
+				alert(1);
+				callPlayer('yt-video', 'stopVideo');
+			});
+        });
 	</script>
 </body>
 </html>

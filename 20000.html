@@ -250,7 +250,11 @@
     <script>
 		slider();
         lightboxIFrame();
-		stopVimeo();
+		$(document).ready(function(e) {
+            $("#video").click(function(){
+				stopVimeo();
+			});
+        });
 	</script>
 </body>
 </html>

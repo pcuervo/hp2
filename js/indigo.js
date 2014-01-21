@@ -4,7 +4,6 @@
  Cliente:              Litobel
  Última actualización: 12/13/2013
 *****************************************/
-
 $( document ).ready(function() {
 	// GENERAL
 	//jsResponsivo();
