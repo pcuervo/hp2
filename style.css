@@ -352,7 +352,7 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 
 
 /* LIGHTBOX VIDEOS */
-.lightbox-container { position: fixed; width:100%; height:100%; top:0; left:0; background-color:rgba(0, 0, 0, 0.5); z-index: 90; overflow:hidden; display:none; }
+.lightbox-container { position: fixed; width:100%; height:100%; top:0; left:0; background-color:rgba(0, 0, 0, 0.5); z-index: 90; overflow-y:scroll; display:none; }
     .lightbox-container .lightbox-media { width:60%; margin:2% auto; padding: 2%; background: #00a0dd; display: block; position:relative; overflow: hidden;
 			border-top-right-radius: 15px;
 			border-bottom-left-radius: 15px;

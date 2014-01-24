@@ -415,6 +415,7 @@ $( document ).ready(function() {
 
 			$(".lightbox-container").css("display", "block");
 
+
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
@@ -431,6 +432,27 @@ $( document ).ready(function() {
 		}
 	}
 
+	// function lightboxMediaHeight(){
+	// 	var alturaWindow = $(window).height(),
+	// 		alturalightboxMedia = $('.lightbox-media').height();
+
+	// 		alturaWindow9 = alturaWindow*0.9;
+	// 		alturaWindow8 = alturaWindow*0.8;
+
+	// 	if ( alturalightboxMedia > alturaWindow8 ){
+	// 		var alturaImagen = $('.frame-img img[style="display: block;"]').height();
+	// 		console.log(alturaImagen);
+
+	// 		return;
+
+	// 		$('.lightbox-media').css('maxWidth', alturaWindow9);
+	// 	}
+	// }
+
+	// $(window).resize(function(){
+	// 	lightboxMediaHeight();
+	// });
+
 	//Fitvids
 	$(function(){
 		if ( $('.video').length > 0 ){
@@ -445,7 +467,7 @@ $( document ).ready(function() {
 	   		vimeoWrap.html( vimeoWrap.html() );
 		});
 	}
-	
+
 	// API YouTube
 	function callPlayer(frame_id, func, args) {
 		if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
