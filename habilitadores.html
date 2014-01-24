@@ -142,31 +142,26 @@
                                 <img src="images/graphic_arts/page-0.jpg" class="slider-item activo" id="graphic-1" />
                                 <img src="images/graphic_arts/page-1.jpg" class="slider-item" id="graphic-2" />
                                 <img src="images/graphic_arts/page-2.jpg" class="slider-item"  id="graphic-3" />
-                                <img src="images/graphic_arts/page-3.jpg" class="slider-item"  id="graphic-4" />
-                                <img src="images/graphic_arts/page-4.jpg" class="slider-item"  id="graphic-5" />
-
                                 <a href="#" class="flecha-izq left"><img src="images/prev.png" alt="Previous"></a>
                                 <a href="#" class="flecha-der right"><img src="images/next.png" alt="Next"></a>
                                 <ul class="control-slider control-slider-graphic">
                                     <li><a href="#" class="activo" id="control-1"></a></li>
                                     <li><a href="#" id="control-2"></a></li>
                                     <li><a href="#" id="control-3"></a></li>
-                                    <li><a href="#" id="control-4"></a></li>
-                                    <li><a href="#" id="control-5"></a></li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- <a href="#" id="videoHabilitadores">Ver video</a> -->
+                        <a href="#" id="videoHabilitadores">Ver video</a> 
                     </div>
                 </div>
-                <!--
                 <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
                         <iframe src="http://www.youtube.com/embed/717_QHgvX88?rel=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h2>Graphic Arts</h2>
-                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <!--<a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">-->
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div> 
@@ -253,7 +248,12 @@
 		slider("soporte");
 		slider("dscoop");
 		slider("graphic");
-        //lightboxHabilitadores();
+        lightboxHabilitadores();
+		$(document).ready(function(e) {
+            $("#stop").click(function(){
+				callPlayer('yt-video', 'stopVideo');
+			});
+        });
         //callPlayer('yt-video', 'stopVideo');
 	</script>
 </body>

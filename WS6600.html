@@ -179,7 +179,7 @@
                         <iframe src="http://www.youtube.com/embed/Dh__C34FWhg" frameborder="0" allowfullscreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo WS6600</h2>
-                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
@@ -262,8 +262,7 @@
 		slider();
         lightboxIFrame();
 		$(document).ready(function(e) {
-            $("#video").click(function(){
-				alert(1);
+            $("#stop").click(function(){
 				callPlayer('yt-video', 'stopVideo');
 			});
         });
