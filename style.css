@@ -688,8 +688,8 @@ and (max-width : 320px) {
 }
 
 @media only screen
-and (min-height: 1000px)
-and (min-width: 800px) {
+and (min-height: 1100px)
+and (min-width: 850px) {
 
 	.content{ width: 100%; margin: 0 auto 30% auto; }
 	.panel-historias .regresa p{ line-height: 25px; }
