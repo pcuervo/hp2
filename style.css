@@ -704,3 +704,15 @@ and (min-width: 850px) {
 	.menu-horizontal li img { width: 80%; height: auto; margin: 10px auto; }
 	.menu-horizontal li p { display: none; }
 }
+
+/**** SCREENSAVER ****/
+
+.screensaver{ display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: #fff; z-index: 999999; }
+
+.screensaver img{ position: relative; z-index: 9999999; }
+
+.screensaver .logo_screensaver{ position: absolute; top: 20px; left: 20px; }
+.screensaver .tocar{ position: absolute; bottom: 20px; right: 20px; }
+
+.screensaver_centrar{ width: 60%; position: relative; top: 50%; left: 50%; }
+.screensaver_inner{ position: relative; width: 100%; margin-top: -40%; margin-left: -50%; }

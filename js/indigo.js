@@ -5,6 +5,24 @@
  Última actualización: 12/13/2013
 *****************************************/
 $( document ).ready(function() {
+
+
+	//Screensvaer
+	setTimeout(function() {
+
+		$('.container').after("<div class='screensaver'> <img class='logo_screensaver' src='images/logo_screensaver.png'alt='HP'><div class='screensaver_centrar'><div class='screensaver_inner video'><iframe src='http://player.vimeo.com/video/85501048?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=1' width='500' height='375' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div><img class='tocar' src='images/tocar.png'></div>");
+		$('.screensaver').show();
+		$('.video').fitVids();
+
+		$('.screensaver').on('click', function(){
+			window.location = 'http://hpindigo.com.mx';
+		});
+
+	}, 330000);
+
+
+
+
 	// GENERAL
 	//jsResponsivo();
 	//ajustarAlturaMenu();
@@ -50,30 +68,6 @@ $( document ).ready(function() {
 		muestraInfoHabilitadores("servicio");
 		menuHabilitadores[0].addEventListener("click", cambiaTabHabilitadores, false);
 	}
-
-	// var timeOut = 3000;
-	// window.setInterval(function(){
-	// 	timeOut -=1000
-
-	// 	if ( timeOut == -1000 ){
-	// 		timeOut = 3000;
-	// 	}
-
-	// 	if ( timeOut == 0 ){
-	// 		$('.lightbox-container').show();
-	// 		console.log('es igual a 0');
-	// 	}
-
-	// }, 1000);
-
-	// $('.container').on('click', function(){
-	// 	timeOut = 3000;
-	// });
-
-	// $('.lightbox-container').on('click', function(){
-	// 	$(this).hide();
-	// 	timeOut = 3000;
-	// });
 
 });
 
@@ -431,27 +425,6 @@ $( document ).ready(function() {
 			$(".frame-img img").css("display", "none");
 		}
 	}
-
-	// function lightboxMediaHeight(){
-	// 	var alturaWindow = $(window).height(),
-	// 		alturalightboxMedia = $('.lightbox-media').height();
-
-	// 		alturaWindow9 = alturaWindow*0.9;
-	// 		alturaWindow8 = alturaWindow*0.8;
-
-	// 	if ( alturalightboxMedia > alturaWindow8 ){
-	// 		var alturaImagen = $('.frame-img img[style="display: block;"]').height();
-	// 		console.log(alturaImagen);
-
-	// 		return;
-
-	// 		$('.lightbox-media').css('maxWidth', alturaWindow9);
-	// 	}
-	// }
-
-	// $(window).resize(function(){
-	// 	lightboxMediaHeight();
-	// });
 
 	//Fitvids
 	$(function(){
