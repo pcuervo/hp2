@@ -58,6 +58,7 @@
 
                 <div class="main-content adicionales left">
                     <div class="seccion-segmento" id="aurasma">
+                        <a href="#" id="videoHabilitadores">Ver video</a>
                         <div class="contenido-slider slider-aurasma">
                             <div class="slider">
                                 <img src="images/aurasma_001.jpg" class="slider-item activo" id="aurasma-1" />
@@ -75,6 +76,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lightbox-container">
+                        <div class="lightbox-media">
+                            <div class="frame-video" id="yt-video">
+                            <iframe src="http://www.youtube.com/embed/GBKy-hSedg8" frameborder="0" allowfullscreen></iframe>                            </div>
+                            <h2>Aurasma</h2>
+                            <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                                <img src="images/cerrar.png" />
+                            </a>
+                        </div>
+                    </div> <!-- lightbox -->
                     <div class="seccion-segmento" id="calendario">
 						<div class="contenido-slider">
                             <div class="slider slider-calendario">
@@ -191,7 +202,7 @@
     <script type="text/javascript">
         slider("aurasma");
 		slider("calendario");
-		sliderVid();
+        lightboxHabilitadores();
     </script>
 </body>
 </html>
