@@ -20,7 +20,8 @@ $( document ).ready(function() {
 
 	}, 330000);
 
-
+	//FANCYBOX IFRAME
+	$('.iframebox').fancybox();
 
 
 	// GENERAL
