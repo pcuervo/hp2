@@ -21,8 +21,9 @@ $( document ).ready(function() {
 	}, 330000);
 
 	//FANCYBOX IFRAME
-	$('.iframebox').fancybox();
-
+	if ( $('.iframebox').length > 0 ){
+		$('.iframebox').fancybox();
+	}
 
 	// GENERAL
 	//jsResponsivo();
