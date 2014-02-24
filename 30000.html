@@ -160,7 +160,7 @@
                         <iframe src="http://www.youtube.com/embed/ueuUhYNWNLU" frameborder="0" allowfullscreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo 30000</h2>
-                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
@@ -242,7 +242,11 @@
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		$(document).ready(function(e) {
+            $("#stop").click(function(){
+				callPlayer('yt-video', 'stopVideo');
+			});
+        });
 	</script>
 </body>
 </html>

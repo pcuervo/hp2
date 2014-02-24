@@ -162,7 +162,7 @@
                     	<iframe src="http://player.vimeo.com/video/84279837?api=1&byline=0&amp;portrait=0&amp;color=ffffff" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP Indigo WS6600p</h2>
-                    <a href="#">
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
@@ -247,7 +247,11 @@
     <script>
 		slider();
         lightboxIFrame();
-        stopVimeo();
+        $(document).ready(function(e) {
+            $("#stop").click(function(){
+				stopVimeo();
+			});
+        });
 	</script>
 </body>
 </html>

@@ -163,7 +163,7 @@
                         <iframe src="http://www.youtube.com/embed/R3paNo0_RmI" frameborder="0" allowfullscreen></iframe>
                     </div><!-- frame-video -->
                     <h2>HP T200 Color Inkjet Web Press</h2>
-                    <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
@@ -245,7 +245,11 @@
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		$(document).ready(function(e) {
+            $("#stop").click(function(){
+				callPlayer('yt-video', 'stopVideo');
+			});
+        });
 	</script>
 </body>
 </html>
