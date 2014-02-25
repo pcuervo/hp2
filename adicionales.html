@@ -81,7 +81,7 @@
                             <div class="frame-video" id="yt-video">
                             <iframe src="http://www.youtube.com/embed/GBKy-hSedg8" frameborder="0" allowfullscreen></iframe>                            </div>
                             <h2>Aurasma</h2>
-                            <a href="javascript:void callPlayer(&quot;yt-video&quot;,&quot;stopVideo&quot;)">
+                            <a href="#" id="stop">
                                 <img src="images/cerrar.png" />
                             </a>
                         </div>
@@ -203,6 +203,11 @@
         slider("aurasma");
 		slider("calendario");
         lightboxHabilitadores();
+        $(document).ready(function(e) {
+            $("#stop").click(function(){
+                callPlayer('yt-video', 'stopVideo');
+            });
+        });
     </script>
 </body>
 </html>

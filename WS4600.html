@@ -250,7 +250,11 @@
     <script>
 		slider();
         lightboxIFrame();
-		callPlayer('yt-video', 'stopVideo');
+		$(document).ready(function(e) {
+            $("#stop").click(function(){
+                callPlayer('yt-video', 'stopVideo');
+            });
+        });
 	</script>
 </body>
 </html>
