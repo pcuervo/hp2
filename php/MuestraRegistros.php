@@ -15,7 +15,7 @@
 	  echo "Error, no se pudo conectar la base de datos: " . mysqli_connect_error();
 	} 
 
-	//mysql_set_charset('utf8',$conn); 
+	mysql_set_charset('utf8',$conn); 
 	//ini_set('display_errors', 'On');
 
 	$query="SELECT F_Nombre, F_ApePat, F_NomEmpresa, F_Telefono, F_Correo FROM TB_Usuario U INNER JOIN TB_Empresa E ON U.F_IdUsuario = E.F_IdUsuario";

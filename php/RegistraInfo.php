@@ -15,7 +15,7 @@
 	  echo "Error, no se pudo conectar la base de datos: " . mysqli_connect_error();
 	} 
 
-	//mysql_set_charset('utf8',$conn); 
+	mysql_set_charset('utf8',$conn); 
 	//ini_set('display_errors', 'On');
 	
 	// Usuario
