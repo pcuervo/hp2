@@ -49,7 +49,7 @@
 
                     <h4>Información general</h4>
 
-                    <form action="RegistraInfo.php" class="full" accept-charset="utf-8" method="post">
+                    <form action="php/RegistraInfo.php" class="full" accept-charset="utf-8" method="post">
 
                         <div class="renglon clearfix">
 
@@ -80,12 +80,12 @@
                         <div class="renglon clearfix">
 
                             <div class="span c-6">
-                                <input class="span c-12" name="empresa"type="text">
-                                <label class="span c-12" for="empresa">Puesto</label>
+                                <input class="span c-12" name="puesto"type="text">
+                                <label class="span c-12" for="puesto">Puesto</label>
                             </div><!-- span c-6 -->
                             <div class="span c-6">
-                                <input class="span c-12" name="giro"type="text">
-                                <label class="span c-12" for="giro">Nombre comercial de la empresa o negocio</label>
+                                <input class="span c-12" name="empresa"type="text">
+                                <label class="span c-12" for="empresa">Nombre comercial de la empresa o negocio</label>
                             </div><!-- span c-3 -->
 
                         </div><!-- renglon -->
@@ -93,12 +93,33 @@
                         <div class="renglon clearfix">
 
                             <div class="span c-6">
+                                <input class="span c-12" name="razon"type="text">
+                                <label class="span c-12" for="razon">Razón social de la empresa</label>
+                            </div><!-- span c-3 -->
+                            <div class="span c-6">
+                                <input class="span c-12" name="rfc"type="text">
+                                <label class="span c-12" for="rfc">R.F.C.</label>
+                            </div><!-- span c-3 -->
+
+                        </div><!-- renglon -->
+
+                        <div class="renglon clearfix">
+
+                            <div class="span c-3">
                                 <input class="span c-12" name="calle"type="text">
-                                <label class="span c-12" for="calle">Razón social de la empresa</label>
+                                <label class="span c-12" for="calle">Calle</label>
                             </div><!-- span c-3 -->
-                            <div class="span c-6">
-                                <input class="span c-12" name="numero-exterior"type="text">
-                                <label class="span c-12" for="numero-exterior">R.F.C.</label>
+                            <div class="span c-3">
+                                <input class="span c-12" name="num-ext"type="text">
+                                <label class="span c-12" for="num-ext">Número exterior</label>
+                            </div><!-- span c-3 -->
+                            <div class="span c-3">
+                                <input class="span c-12" name="num-int"type="text">
+                                <label class="span c-12" for="num-int">Número interior</label>
+                            </div><!-- span c-3 -->
+                            <div class="span c-3">
+                                <input class="span c-12" name="colonia"type="text">
+                                <label class="span c-12" for="colonia">Colonia</label>
                             </div><!-- span c-3 -->
 
                         </div><!-- renglon -->
@@ -106,41 +127,20 @@
                         <div class="renglon clearfix">
 
                             <div class="span c-3">
-                                <input class="span c-12" name="estado"type="text">
-                                <label class="span c-12" for="estado">Calle</label>
+                                <input class="span c-12" name="del-mun" type="text" name="enteraste">
+                                <label class="span c-12" for="del-mun">Delegación / Municipio</label>
                             </div><!-- span c-3 -->
                             <div class="span c-3">
-                                <input class="span c-12" name="ciudad"type="text">
-                                <label class="span c-12" for="ciudad">Número exterior</label>
+                                <input class="span c-12" type="text" name="ciudad">
+                                <label class="span c-12" for="ciudad">Ciudad</label>
                             </div><!-- span c-3 -->
                             <div class="span c-3">
-                                <input class="span c-12" name="estado"type="text">
-                                <label class="span c-12" for="estado">Número interior</label>
+                                <input class="span c-12" type="text" name="estado">
+                                <label class="span c-12" for="estado">Estado</label>
                             </div><!-- span c-3 -->
                             <div class="span c-3">
-                                <input class="span c-12" name="cp"type="text">
-                                <label class="span c-12" for="cp">Colonia</label>
-                            </div><!-- span c-3 -->
-
-                        </div><!-- renglon -->
-
-                        <div class="renglon clearfix">
-
-                            <div class="span c-3">
-                                <input class="span c-12" type="text" name="enteraste">
-                                <label class="span c-12" for="">Delegación / Municipio</label>
-                            </div><!-- span c-3 -->
-                            <div class="span c-3">
-                                <input class="span c-12" type="text" name="enteraste">
-                                <label class="span c-12" for="">Ciudad</label>
-                            </div><!-- span c-3 -->
-                            <div class="span c-3">
-                                <input class="span c-12" type="text" name="enteraste">
-                                <label class="span c-12" for="">Estado</label>
-                            </div><!-- span c-3 -->
-                            <div class="span c-3">
-                                <input class="span c-12" type="text" name="enteraste">
-                                <label class="span c-12" for="">C.P.</label>
+                                <input class="span c-12" type="text" name="cp">
+                                <label class="span c-12" for="cp">C.P.</label>
                             </div><!-- span c-3 -->
 
                         </div><!-- renglon -->
