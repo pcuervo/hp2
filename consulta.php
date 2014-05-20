@@ -1,9 +1,9 @@
 <?php 
-    /*	$id = $_GET['logged'];
-		if(empty($id)) 
-			header('Location: login.html ');
-		else {*/
-    ?>
+    $id = $_GET['logged'];
+	if(empty($id)) 
+		header('Location: login.html ');
+	else {
+?>
 <!doctype html>
 	<head>
 		<meta charset="utf-8">
@@ -69,5 +69,5 @@
         });
 	</script>
 </html>
-<?php //} ?>
+<?php } ?>
 
