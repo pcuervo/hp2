@@ -16,7 +16,7 @@
 		<meta http-equiv="cleartype" content="on">
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
-	
+
 	<body>
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
@@ -27,10 +27,14 @@
 
 				<div class="width clearfix">
 
-					<h1 class="columna c-10" >Registro HP Indigo</h1>
-					<img class="span c-2 right" src="images/hp_logo.png" alt="">
+                    <div class="columna c-10 medium-9">
+                        <h1>HP Indigo Digital Press</h1>
+                        <h2>Meeting Demand Generation GCP</h2>
+                    </div>
 
-				</div><!-- width clearfix -->
+                    <img class="span c-1 medium-3 right" src="images/hp_logo.png" alt="">
+
+                </div><!-- width clearfix -->
 
 			</header>
 
