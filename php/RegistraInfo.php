@@ -53,6 +53,8 @@
 		die('Error: ' . mysqli_error($con));
 	}
 	
+	echo json_encode(array('nombre' => $nombre));
+	
 	
 	/*
 	
@@ -97,7 +99,6 @@
 	// Mail it
 	mail($para, $titulo, $mensaje, $cabeceras);
 	*/
-	header( 'Location: ../registro.html' ) ;
-	
+
 	
 ?>

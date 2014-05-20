@@ -1,5 +1,6 @@
 <?php 
-    $id = $_GET['logged'];
+	session_start();
+    $id = $_GET['id'];
 	if(empty($id)) 
 		header('Location: login.html ');
 	else {

@@ -14,7 +14,7 @@
 	if (mysqli_connect_errno()){
 	  echo "Error, no se pudo conectar la base de datos: " . mysqli_connect_error();
 	} 
-	
+
 	$usuario = $_POST['usuario'];
 	$password = $_POST['password'];
 		
@@ -23,9 +23,9 @@
 	if($rUsuario = mysqli_fetch_array($qUsuario)) {
 		session_start();
 		$_SESSION['usuario'] = $usuario;
-		header('Location: consulta.php?id='. session_id()) ;	
+		header('Location: ../consulta.php?id='. session_id()) ;	
 	} else {
-		header('Location: login.html');
+		header('Location: ../login.html');
 		
 	}
 

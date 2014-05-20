@@ -49,7 +49,7 @@
 
                     <h4>Información general</h4>
 
-                    <form id="forma-registro" action="php/RegistraInfo.php" class="full" accept-charset="utf-8" method="post">
+                    <form id="forma-registro" class="full" accept-charset="utf-8">
 
                         <div class="renglon clearfix">
 
@@ -170,4 +170,22 @@
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/registro.js"></script>
+    <script>
+        $('form').submit(function(e){
+            e.preventDefault();
+            console.log('enviando');
+            $.ajax({
+                type:       "POST",
+                url:        "php/RegistraInfo.php", 
+                data:       $( "form" ).serialize(),
+                success:    function(data){
+                    data_json = $.parseJSON(data);
+                    alert("Gracias por registrarte " + data_json.nombre);
+                    window.location = "index.html";
+                }
+            });
+        });
+    
+    
+    </script>
 </html>
