@@ -221,7 +221,9 @@ a{ color: @highlight; .hp( 12px, 12px, 'hp light' ); }
 
 /*** HEADER ***/
 
-header{ margin-bottom: @margen; padding-top: @margen; border-bottom: 1px solid @highlight; }
+header{ margin-bottom: @margen; padding-top: @margen; border-bottom: 1px solid @highlight;
+	.agc{ margin-top: 6%; }
+}
 
 h1{ margin-bottom: (@margen/2); .hp( 2.6em, 1em, 'hp bold' ); }
 
@@ -262,19 +264,21 @@ input[type='submit']{ cursor: pointer; text-transform: uppercase; .hp( 20px, 20p
 	}
 
 	.span{ float: left;
-		&.c-1{ width: 8.3%; }
-		&.c-2{ width: 16.6%; }
-		&.c-3{ width: 24.9%; }
-		&.c-4{ width: 33.2%; }
-		&.c-5{ width: 41.5%; }
-		&.c-6{ width: 49.8%; }
-		&.c-7{ width: 58.1%; }
-		&.c-8{ width: 66.4%; }
-		&.c-9{ width: 74.7%; }
-		&.c-10{ width: 83%; }
-		&.c-11{ width: 91.3%; }
-		&.c-12{ width: 99.6%; }
+		&.medium-1{ width: 8.3%; }
+		&.medium-2{ width: 16.6%; }
+		&.medium-3{ width: 24.9%; }
+		&.medium-4{ width: 33.2%; }
+		&.medium-5{ width: 41.5%; }
+		&.medium-6{ width: 49.8%; }
+		&.medium-7{ width: 58.1%; }
+		&.medium-8{ width: 66.4%; }
+		&.medium-9{ width: 74.7%; }
+		&.medium-10{ width: 83%; }
+		&.medium-11{ width: 91.3%; }
+		&.medium-12{ width: 99.6%; }
 	}
+
+	.no-medium{ display: none; }
 
 	.c-10.right{ width: 97.6%; }
 

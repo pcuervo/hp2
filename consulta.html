@@ -1,7 +1,13 @@
+<?php
+    /*	$id = $_GET['logged'];
+		if(empty($id))
+			header('Location: login.html ');
+		else {*/
+    ?>
 <!doctype html>
 	<head>
 		<meta charset="utf-8">
-		<title>HP Indigo</title>
+		<title>Registro HP Indigo</title>
 		<link rel="stylesheet" href="registro.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<meta name="description" content="">
@@ -23,6 +29,7 @@
 
                     <div class="columna c-10 medium-9">
                         <h1>HP Indigo Digital Press</h1>
+                        <h2>Meeting Demand Generation GCP</h2>
                     </div>
 
                     <img class="span c-1 medium-3 right" src="images/hp_logo.png" alt="">
@@ -32,45 +39,14 @@
 			</header>
 
 			<div class="main">
+				<div id="registros" class="width clearfix">
+				</div><!-- registros -->
 
 				<div class="width clearfix">
 
-					<div class="renglon clearfix">
+					<a class="columna c-3 small-12 boton" href="php/DescargaCSV.php">Descarga archivo</a>
 
-						<div class="columna c-4 center small-12 medium-6">
-							<h3>Consulta de registrados</h3>
-							<h4>Ingresa tu nombre de usuario y contraseña</h4>
-
-							<br />
-
-							<form action="php/ValidaLogin.php" accept-charset="utf-8" method="post">
-
-								<div class="renglon clearfix">
-									<div class="span c-12">
-										<input class="span c-12 primer_campo" name="usuario"type="text">
-										<label class="span c-12" for="usuario">Usuario</label>
-									</div><!-- span c-12 -->
-								</div><!-- renglon -->
-
-								<div class="renglon clearfix">
-
-									<div class="span c-12">
-										<input class="span c-12" name="password" type="password">
-										<label class="span c-12" for="password">Contraseña</label>
-									</div><!-- span c-12 -->
-
-								</div><!-- renglon -->
-
-								<div class="columna c-6 center">
-									<input class="boton columna c-12" type="submit" value="enviar">
-								</div><!-- columna c-12 -->
-
-
-							</form>
-						</div><!-- columna c-6 -->
-					</div>
-
-				</div><!-- width clearfix -->
+				</div><!-- width -->
 
 			</div><!-- main -->
 
@@ -83,11 +59,19 @@
 	</body>
 
 	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="js/etimex.js"></script>
-    <script>
-		//alert("val="+logged);
-		var logged = getURLParameter("logged");
-		//alert("val="+logged);
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+            $.ajax({    //create an ajax request to load_page.php
+				type: "GET",
+				url: "php/MuestraRegistros.php",
+				dataType: "html",   //expect html to be returned
+				success: function(response){
+				$("#registros").html(response);
+				//alert(response);
+				}
+			});
+        });
 	</script>
 </html>
+<?php //} ?>
 
