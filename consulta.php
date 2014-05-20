@@ -27,11 +27,12 @@
 
 				<div class="width clearfix">
 
-                    <div class="columna c-10 medium-9">
+                    <div class="columna c-7 medium-6 small-12">
                         <h1>HP Indigo Digital Press</h1>
                     </div>
 
-                    <img class="span c-1 medium-3 right" src="images/hp_logo.png" alt="">
+                    <img class="columna c-2 medium-3 small-4 right" src="images/hp_logo.png" alt="">
+                    <img class="columna c-3 medium-3 small-8 right agc" src="images/agc.jpg" alt="">
 
                 </div><!-- width clearfix -->
 
