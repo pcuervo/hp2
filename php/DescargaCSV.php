@@ -3,7 +3,7 @@
 	header('Content-type: text/html; charset=utf-8');
 	ini_set('default_charset', 'utf-8');
 	// Conectar bd
-	$con=mysqli_connect("db528480544.db.1and1.com","db528480544","HP_Registro123","db528480544");
+	$con=mysqli_connect("db528480544.db.1and1.com","dbo528480544","HP_Registro123","db528480544");
 
 		
     mysql_query("SET character_set_results=utf8", $con);

@@ -1,0 +1,90 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<title>HP Indigo</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="cleartype" content="on">
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head>
+
+	<body>
+		<!--[if lt IE 9]>
+			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
+		<![endif]-->
+		<div class="container">
+
+			<header>
+
+				<div class="width clearfix">
+
+					<h1 class="columna c-10" >Registro HP Indigo</h1>
+					<img class="span c-2 right" src="images/hp_logo.png" alt="">
+
+				</div><!-- width clearfix -->
+
+			</header>
+
+			<div class="main">
+
+				<div class="width clearfix">
+
+					<div class="renglon clearfix">
+
+						<div class="columna c-4 center small-12 medium-6">
+							<h3>Consulta de registrados</h3>
+							<h4>Ingresa tu nombre de usuario y contraseña</h4>
+
+							<br />
+
+							<form action="ValidaLogin.php" accept-charset="utf-8" method="post">
+
+								<div class="renglon clearfix">
+									<div class="span c-12">
+										<input class="span c-12 primer_campo" name="usuario"type="text">
+										<label class="span c-12" for="usuario">Usuario</label>
+									</div><!-- span c-12 -->
+								</div><!-- renglon -->
+
+								<div class="renglon clearfix">
+
+									<div class="span c-12">
+										<input class="span c-12" name="password" type="password">
+										<label class="span c-12" for="password">Contraseña</label>
+									</div><!-- span c-12 -->
+
+								</div><!-- renglon -->
+
+								<div class="columna c-6 center">
+									<input class="boton columna c-12" type="submit" value="enviar">
+								</div><!-- columna c-12 -->
+
+
+							</form>
+						</div><!-- columna c-6 -->
+					</div>
+
+				</div><!-- width clearfix -->
+
+			</div><!-- main -->
+
+		</div><!-- container -->
+
+		<footer>
+
+		</footer>
+
+	</body>
+
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="js/etimex.js"></script>
+    <script>
+		//alert("val="+logged);
+		var logged = getURLParameter("logged");
+		//alert("val="+logged);
+	</script>
+</html>
+
