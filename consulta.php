@@ -1,6 +1,6 @@
-<?php 
+<?php
     $id = $_GET['logged'];
-	if(empty($id)) 
+	if(empty($id))
 		header('Location: login.html ');
 	else {
 ?>
