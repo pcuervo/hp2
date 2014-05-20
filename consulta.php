@@ -29,7 +29,6 @@
 
                     <div class="columna c-10 medium-9">
                         <h1>HP Indigo Digital Press</h1>
-                        <h2>Meeting Demand Generation GCP</h2>
                     </div>
 
                     <img class="span c-1 medium-3 right" src="images/hp_logo.png" alt="">
