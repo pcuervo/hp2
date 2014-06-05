@@ -428,6 +428,25 @@ $( document ).ready(function() {
 		}
 	}
 
+	function lightboxHome() {
+	    $(".contacto").click(function (e) {
+	    	e.preventDefault();
+
+			$(".frame-img").css("display", "block");
+	        var titulo = "Distribuidores autorizados";
+			$(".lightbox-container").css("display", "block");
+
+	        $(".lightbox-media a").click(function () {
+	            $(".lightbox-container").css("display", "none");
+	        });
+
+	        $('body').animate(
+	    		{ scrollTop:0 }, '500'
+	    	);
+	    });
+
+	}
+
 	//Fitvids
 	$(function(){
 		if ( $('.video').length > 0 ){

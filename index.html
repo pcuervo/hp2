@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css" media="screen" />
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
 
     <meta charset="UTF-8">
@@ -71,6 +72,12 @@
                     <a href="correo.html">
                         <img src="images/correo.png" alt="">
                         <h4>Correo directo e impresión transaccional</h4>
+                    </a>
+                </div><!-- aplicacion_boton -->
+                <div class="aplicacion_boton left">
+                    <a href="#" class="contacto">
+                        <img src="images/info.png" alt="">
+                        <h4>Contacto</h4>
                     </a>
                 </div><!-- aplicacion_boton -->
             </div><!-- content -->
@@ -145,12 +152,28 @@
                 </li>
             </ul> <!-- menu-horizontal -->
         </div><!-- main -->
-    </div><!--container-->
+        <div class="lightbox-container">
+                <div class="lightbox-media">
+                    <p class="contacto-texto">Para mayor información, contáctenos:</p>
 
+                    <div class="frame-img">
+                        <img src="images/logos.png" />
+                    </div>
+                    
+                    <h2>Luis Heredia<a href="mailto:luis.heredia2@hp.com">luis.heredia2@hp.com</a></h2>
+                    <a href="#">
+                        <img src="images/cerrar.png" />
+                    </a>
+                </div>
+            </div> <!-- lightbox -->
+    </div><!--container-->
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/jRespond.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
+    <script>
+        lightboxHome();
+    </script>
 </body>
 </html>

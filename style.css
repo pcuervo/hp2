@@ -138,6 +138,12 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 	.menu-horizontal a.activo { background-color: #C14535; cursor:default; }
 
 /********************
+		HOME
+ ********************/
+
+
+
+/********************
       SEGMENTOS
  ********************/
 .descripcion { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 3px solid #f5f6f7; }
@@ -360,15 +366,20 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 			-webkit-border-bottom-left-radius: 15px;
 			-moz-border-radius-topright: 15px;
 			-moz-border-radius-bottomleft: 15px;}
-        .lightbox-media a { display:block; width:7%; margin-top: 2%; float:right;}
+        .lightbox-media a { display:block; width:7%; margin-top: 12%; float:right;}
             .lightbox-media a img { width:100%; height:auto;}
         .lightbox-container .lightbox-media video { width:100%; height:auto;}
         .lightbox-container .frame-video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .lightbox-container .frame-video iframe{ height: 100% !important; position: absolute; top: 0; left: 0; width: 100%; }
         .lightbox-container .lightbox-media iframe { width:100%; height:auto; }
-        .lightbox-container .lightbox-media h2 { display: inline-block; width: 90%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
+        .lightbox-container .lightbox-media h2, .lightbox-container .lightbox-media h2 a  { display: inline-block; width: 70%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
+        .lightbox-container .lightbox-media h2 a  { float: left; }
 
 .lightboxChico{ width: 50% !important; }
+
+img.distribuidor { width:100%;}
+.contacto-texto { font-size: 20px; color: #FFF; font-family: 'hp_regular';}
+.contacto-texto a { width: 100%; float:none; margin-top: 0;  color: #FFF; text-decoration: underline; }
 
 /* HABILITADORES */
 #videoHabilitadores{ width: 190px; height: 37px; display:block; color:#FFF; text-decoration:none; background-color:#00A0DD; font-size:18px; line-height:18px; text-align:left; padding: 1%; font-family:'hp_bold'; }
