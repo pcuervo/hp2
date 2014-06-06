@@ -372,7 +372,7 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
         .lightbox-container .frame-video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .lightbox-container .frame-video iframe{ height: 100% !important; position: absolute; top: 0; left: 0; width: 100%; }
         .lightbox-container .lightbox-media iframe { width:100%; height:auto; }
-        .lightbox-container .lightbox-media h2, .lightbox-container .lightbox-media h2 a  { display: inline-block; width: 70%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
+        .lightbox-container .lightbox-media h2, .lightbox-container .lightbox-media h2 a  { display: inline-block; width: 90%; font-size:36px; color:#FFF; font-family: 'hp_regular'; margin-top:10px; margin-bottom:0; line-height:36px; padding-top:20px; float: left; }
         .lightbox-container .lightbox-media h2 a  { float: left; }
 
 .lightboxChico{ width: 50% !important; }
@@ -593,6 +593,9 @@ and (max-width : 620px) {
 	.contenido-beneficios > div{ width: 100% !important; margin: 0 0 20px 0 !important; float: none; }
 	.contenido-beneficios div:first-child img{ display: block; width: 50%; height: auto; margin: 0 auto; }
 	.contenido-beneficios div:last-child{}
+
+	.lightbox-container .lightbox-media h2, .lightbox-container .lightbox-media h2 a { font-size:20px; margin-top: 0; line-height:20px; padding-top:10px; }
+
 }
 
 
@@ -676,7 +679,7 @@ and (max-width : 480px) {
 
 	/* LIGHTBOX VIDEOS */
 	.lightbox-container .lightbox-media { width:95%; }
-	.lightbox-container .lightbox-media h2 { font-size:18px; margin-top: 0; line-height:26px; padding-top:10px; }
+	.lightbox-container .lightbox-media h2, .lightbox-container .lightbox-media h2 a { font-size:18px; margin-top: 0; line-height:18px; padding-top:10px; }
 
 }
 
