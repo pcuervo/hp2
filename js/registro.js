@@ -20,7 +20,7 @@
                 url:        "php/RegistraInfo.php", 
                 data:       $( "form" ).serialize(),
                 success:    function(data){
-                    data_json = $.parseJSON(data);
+                    var data_json = $.parseJSON(data);
                     alert("Gracias por registrarte " + data_json.nombre);
                     window.location = "registro.html";
                 }
