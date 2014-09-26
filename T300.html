@@ -166,10 +166,10 @@
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <iframe src="http://www.youtube.com/embed/FsCqrht9O1w" frameborder="0" allowfullscreen></iframe>
-                    </div><!-- frame-video -->
+                        <div id="player"></div>
+                    </div>
                     <h2>HP T300 Color Inkjet Web Press</h2>
-                    <a href="#" id="stop"> 
+                    <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
@@ -253,11 +253,15 @@
     <script>
 		slider();
         lightboxIFrame();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				callPlayer('yt-video', 'stopVideo');
-			});
-        });
+		var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'FsCqrht9O1w',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
 	</script>
 </body>
 </html>

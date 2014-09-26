@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="contenido-slider">
-                	<div class="slider">
+                    <div class="slider">
                     	<img src="images/5600-1.jpg" class="slider-item activo" id="1" />
                         <img src="images/5600-2.jpg" class="slider-item" id="2" />
                         <img src="images/5600-3.jpg" class="slider-item"  id="3" />
@@ -178,7 +178,7 @@
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <iframe src="http://www.youtube.com/embed/M4sCkTbNf_M?rel=0" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                     <h2>HP Indigo 5600</h2>
                     <a href="#" id="stop">
@@ -263,11 +263,15 @@
     <script>
 		slider();
         lightboxIFrame();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				callPlayer('yt-video', 'stopVideo');
-			});
-        });
-	</script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'M4sCkTbNf_M',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+    </script>
 </body>
 </html>

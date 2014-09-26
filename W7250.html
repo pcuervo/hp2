@@ -175,7 +175,7 @@
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <iframe src="http://www.youtube.com/embed/Kx_VOJzpfBM" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                     <h2>HP Indigo W7250</h2>
                     <a href="#" id="stop">
@@ -260,11 +260,15 @@
     <script>
 		slider();
         lightboxIFrame();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				callPlayer('yt-video', 'stopVideo');
-			});
-        });
+		var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'Kx_VOJzpfBM',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
 	</script>
 </body>
 </html>
