@@ -411,12 +411,9 @@ $( document ).ready(function() {
 
 			$(".lightbox-container").css("display", "block");
 
-
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
-
-
 
 	        $('body').animate(
 	    		{ scrollTop:0 }, '500'
@@ -463,7 +460,7 @@ $( document ).ready(function() {
 	}
 
 	function stopVimeoSegmento() {
-		$('#menu_segmentos a').click(function(e) {
+		$('#menu_segmentos a,  .botones-historia a').click(function(e) {
 			e.preventDefault();
 			$('.vimeoWrap').each( function(){
 				vimeoWrap = $(this);
@@ -487,7 +484,7 @@ $( document ).ready(function() {
             playVideo();
         });
 
-        var pauseButton = $('#stop, #menu_segmentos a');
+        var pauseButton = $('#stop, #menu_segmentos a, .botones-historia a');
         pauseButton.on('click', function(e){
             e.preventDefault();
             stopVideo();

@@ -5,10 +5,8 @@
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
-
     <meta charset="UTF-8">
     <title>HP Indigo | Digipix</title>
-
     <!--[if lt IE 9]>
         <script src="dist/html5shiv.js"></script>
     <![endif]-->
@@ -94,7 +92,7 @@
 
                 <div class="contenido-video">
                     <div class="frame-video">
-                        <iframe src="http://www.youtube.com/embed/cWNhJizouIs" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                 </div>
             </div><!-- content -->
@@ -175,6 +173,15 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		slider();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'cWNhJizouIs',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
 	</script>
 </body>
 </html>
