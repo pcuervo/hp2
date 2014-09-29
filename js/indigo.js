@@ -462,6 +462,18 @@ $( document ).ready(function() {
 		});
 	}
 
+	function stopVimeoSegmento() {
+		$('#menu_segmentos a').click(function(e) {
+			e.preventDefault();
+			$('.vimeoWrap').each( function(){
+				vimeoWrap = $(this);
+				console.log(vimeoWrap);
+				vimeoWrap.html( vimeoWrap.html() );
+			});
+
+		});
+	}
+
 	// 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -475,8 +487,9 @@ $( document ).ready(function() {
             playVideo();
         });
 
-        var pauseButton = $('#stop');
-        pauseButton.on('click', function(){
+        var pauseButton = $('#stop, #menu_segmentos a');
+        pauseButton.on('click', function(e){
+            e.preventDefault();
             stopVideo();
         });
       }

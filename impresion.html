@@ -77,14 +77,12 @@
                             <li><a href="W7250.html">HP Indigo W7250</a></li>
                         </ul>
                     </div><!-- seccion-segmento -->
-
-                    <div class="seccion-segmento video" id="tendencias">
+                    <div class="seccion-segmento video vimeoWrap" id="tendencias">
                     	<iframe src="http://player.vimeo.com/video/84277804?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-
                     <div class="seccion-segmento video" id="videos">
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/REgyj2kHgQE?list=PLmqp1TCU_XvJZJnphWOdQTflWgLt2l9VN?rel=0" frameborder="0" allowfullscreen></iframe>
-                    </div><!-- video -->
+                        <div id="player"></div>
+                    </div>
 
                 </div><!-- main_content -->
             </div><!-- content -->
@@ -177,6 +175,17 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		lightboxImg();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'REgyj2kHgQE',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+            $('.video').fitVids();
+        }
+        stopVimeoSegmento();
 	</script>
 </body>
 </html>
