@@ -5,17 +5,14 @@
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
-
     <meta charset="UTF-8">
     <title>HP Indigo | Adicional</title>
-
     <!--[if lt IE 9]>
         <script src="dist/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body >
     <div class="container clearfix">
-
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -110,15 +107,15 @@
                         </div>
                     </div>
                     <div class="seccion-segmento video" id="videos">
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/8Lg-UeFCZ68" frameborder="0" allowfullscreen></iframe>
+                        <div id="player-1"></div>
                     </div><!-- videos -->
                     <div class="seccion-segmento" id="prox-lanzamientos">
                     	<div class="contenido-slider">
                             <div class="slider-vid">
-                                <div class="video1 activo video" id="1" >
+                                <div class="video1 activo video vimeoWrap" id="1" >
                                     <iframe src="http://player.vimeo.com/video/84280367?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                 </div>
-                                <div class="video2 video" id="2">
+                                <div class="video2 video vimeoWrap" id="2">
                                     <iframe src="http://player.vimeo.com/video/84280368?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                 </div>
                                 <a href="#" class="flecha-izq-vid left"><img src="images/prev.png" alt="Previous"></a>
@@ -131,7 +128,6 @@
                         </div>
                     </div><!-- videos -->
                 </div>
-
             </div><!-- content -->
 
             <div class="menu-vertical right">
@@ -218,6 +214,7 @@
         sliderVid("prox-lanzamientos");
         lightboxHabilitadores();
         var player;
+        var player1;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
                 videoId: 'GBKy-hSedg8',
@@ -225,7 +222,15 @@
                     'onReady': onPlayerReady
                 }
             });
+            player1 = new YT.Player('player-1', {
+                videoId: '8Lg-UeFCZ68',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+            $('.video').fitVids();
         }
+        stopVimeoSegmento();
     </script>
 </body>
 </html>

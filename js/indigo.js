@@ -61,7 +61,6 @@ $( document ).ready(function() {
 	if(menuAdicionales[0] != null) {
 		muestraInfoAdicionales("aurasma");
 		menuAdicionales[0].addEventListener("click", cambiaTabAdicionales, false);
-		console.log('g');
 		jQuery('#indigo-env').fitVids();
 	}
 
@@ -386,13 +385,10 @@ $( document ).ready(function() {
 
 	function lightboxHabilitadores() {
 	    $("a#videoHabilitadores").click(function () {
-
 	        $(".lightbox-container").css("display", "block");
-
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
-
 	        $('body').animate(
 	    		{ scrollTop:0 }, '500'
 	    	);
@@ -460,11 +456,10 @@ $( document ).ready(function() {
 	}
 
 	function stopVimeoSegmento() {
-		$('#menu_segmentos a,  .botones-historia a').click(function(e) {
+		$('#menu_segmentos a, .botones-historia a, .flecha-der-vid, .flecha-izq-vid, .control-slider-vid a, #stop').click(function(e) {
 			e.preventDefault();
 			$('.vimeoWrap').each( function(){
 				vimeoWrap = $(this);
-				console.log(vimeoWrap);
 				vimeoWrap.html( vimeoWrap.html() );
 			});
 
@@ -484,7 +479,7 @@ $( document ).ready(function() {
             playVideo();
         });
 
-        var pauseButton = $('#stop, #menu_segmentos a, .botones-historia a');
+        var pauseButton = $('#stop, #menu_segmentos a, .botones-historia a, .botones-adicionales a');
         pauseButton.on('click', function(e){
             e.preventDefault();
             stopVideo();
@@ -493,6 +488,10 @@ $( document ).ready(function() {
 
       function stopVideo() {
         player.stopVideo(0);
+        if(typeof player1 !== "undefined"){
+        	player1.stopVideo(0);
+        }
+
       }
       function playVideo() {
         player.playVideo(0);
