@@ -68,7 +68,7 @@
 		die('Error: ' . mysqli_error($con));
 	}
 	
-	echo json_encode(array('nombre' => $nombre));
+	echo json_encode(array('nombre' => $nombre, 'evento' => $evento));
 	
 	
 	/*

@@ -2,8 +2,24 @@
 	// Conectar base de datos
 	header('Content-type: text/html; charset=utf-8');
 	ini_set('default_charset', 'utf-8');
+	
+	$evento = $_GET['evento'];
+
 	// Conectar bd
-	$con=mysqli_connect("db528480544.db.1and1.com","dbo528480544","HP_Registro123","db528480544");
+	if($evento == 'acoban'){
+		// base registro acoban 
+		$con=mysqli_connect("db537376860.db.1and1.com","dbo537376860","Acob@n_123","db537376860");
+	} else if($evento == 'canagraf'){
+		// base registro canagraf 
+		$con=mysqli_connect("db537376937.db.1and1.com","dbo537376937","C@nagraf_123","db537376937");
+	} else if($evento == 'ametiq'){
+		// base registro ametiq 
+		$con=mysqli_connect("db537376955.db.1and1.com","dbo537376955","Amet!q_123","db537376955");
+	} else {
+		// base registro AGCDigital
+		$con=mysqli_connect("db528480544.db.1and1.com","dbo528480544","HP_Registro123","db528480544");
+	}
+
 
 		
     mysql_query("SET character_set_results=utf8", $con);

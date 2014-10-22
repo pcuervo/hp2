@@ -23,7 +23,7 @@
 	if($rUsuario = mysqli_fetch_array($qUsuario)) {
 		session_start();
 		$_SESSION['usuario'] = $usuario;
-		header('Location: ../consulta.php?id='. session_id()) ;	
+		header('Location: ../eventos.php?id='. session_id()) ;	
 	} else {
 		header('Location: ../login.html');
 		

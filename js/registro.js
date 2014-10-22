@@ -5,28 +5,34 @@
 	$(function(){
 
 		$('#forma-registro').validate({
-			submitHandler: function(){
-				enviarFormaAJAX();
-			} 
+            submitHandler: function(){
+                enviarFormaAJAX();
+            } 
 		});	
 
 	});
 
 	function enviarFormaAJAX(){
-		$('#forma-registro').submit(function(e){
-            e.preventDefault();
-            $.ajax({
-                type:       "POST",
-                url:        "php/RegistraInfo.php", 
-                data:       $( "form" ).serialize(),
-                success:    function(data){
-                    var data_json = $.parseJSON(data);
-                    alert("Gracias por registrarte " + data_json.nombre);
+        $('input[type="submit"]').val('Procesando...');
+        $.ajax({
+            type:       "POST",
+            url:        "php/RegistraInfo.php", 
+            data:       $( "form" ).serialize(),
+            success:    function(data){
+                console.log(data);
+                var data_json = $.parseJSON(data);
+                alert("Gracias por registrarte " + data_json.nombre);
+                if(data_json.evento == 'canagraf')
+                    window.location = "canagraf.html";
+                else if(data_json.evento == 'ametiq')
+                    window.location = "ametiq.html";
+                else if(data_json.evento == 'acoban')
+                    window.location = "acoban.html";
+                else
                     window.location = "registro.html";
-                }
-            });
+            }
         });
-	}
+	}// enviarFormaAJAX
 
 
 })(jQuery);
