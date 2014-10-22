@@ -166,8 +166,8 @@ Hasta 100 millones de im&aacute;genes tamaño carta a todo color y hasta 140 mil
             <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <iframe src="http://www.youtube.com/embed/AjIDOtRmf4A" frameborder="0" allowfullscreen></iframe>
-                    </div><!-- frame-video -->
+                        <div id="player"></div>
+                    </div>
                     <h2>HP T400 Color Inkjet Web Press</h2>
                     <a href="#" id="stop">
                         <img src="images/cerrar.png" />
@@ -252,11 +252,15 @@ Hasta 100 millones de im&aacute;genes tamaño carta a todo color y hasta 140 mil
     <script>
 		slider();
         lightboxIFrame();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				callPlayer('yt-video', 'stopVideo');
-			});
-        });
+		var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'AjIDOtRmf4A',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
 	</script>
 </body>
 </html>

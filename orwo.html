@@ -89,14 +89,14 @@
                         <div class="clear"></div>
                         <a href="5600.html">HP Indigo 5000</a>
                         <div class="clear"></div>
-                        <a href="7600.html">HP Indigo 7500</a>
+                        <a href="7800.html">HP Indigo 7500</a>
                     </div><!-- link-prensa -->
 
                 </div>
 
                 <div class="contenido-video">
                     <div class="frame-video">
-                        <iframe src="http://www.youtube.com/embed/9_yPj6SVlSg" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                 </div>
             </div><!-- content -->
@@ -177,6 +177,16 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		slider();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: '9_yPj6SVlSg',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+            $('.video').fitVids();
+        }
 	</script>
 </body>
 </html>

@@ -99,7 +99,7 @@
 
                 <div class="contenido-video">
                     <div class="frame-video">
-                         <iframe src="http://www.youtube.com/embed/TRm5QMirouI" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                 </div>
             </div><!-- content -->
@@ -180,6 +180,15 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
         slider();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'TRm5QMirouI',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
     </script>
 </body>
 </html>

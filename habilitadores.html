@@ -158,8 +158,8 @@
                 </div>
                 <div class="lightbox-container">
                 <div class="lightbox-media">
-                    <div class="frame-video" id="yt-video">
-                        <iframe src="http://player.vimeo.com/video/84893747?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="frame-video vimeoWrap" id="v-video">
+                        <iframe src="http://player.vimeo.com/video/84893747?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
                     </div>
                     <h2>Graphic Arts</h2>
                     <a href="#" id="stop">
@@ -252,11 +252,16 @@
 		slider("dscoop");
 		slider("graphic");
         lightboxHabilitadores();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				callPlayer('yt-video', 'stopVideo');
-			});
-        });
+		var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'GBKy-hSedg8',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+        stopVimeoSegmento();
 	</script>
 </body>
 </html>

@@ -34,7 +34,7 @@
                     <img src="images/corrugado_azul.png" alt="" class="icono left">
                     <div class="info_aplicacion left">
                         <h2>Empaque de Cart&oacute;n Plegadizo</h2>
-                        <p>Aproveche las capacidades que le situar&acute;n en una posici&oacute;n privilegiada frente a la competencia, de tiempos de respuesta r&aacute;pidos y tiradas cortas a resultados constantes con calidad offset. HP Indigo junta la velocidad y la calidad para unas soluciones de cartones plegables de gran relaci&oacute;n calidad y precio.</p>
+                        <p>Aproveche las capacidades que le situarán en una posici&oacute;n privilegiada frente a la competencia, de tiempos de respuesta r&aacute;pidos y tiradas cortas a resultados constantes con calidad offset. HP Indigo junta la velocidad y la calidad para unas soluciones de cartones plegables de gran relaci&oacute;n calidad y precio.</p>
                     </div><!-- info_aplicacion -->
                 </div><!-- descripcion -->
 
@@ -70,16 +70,18 @@
                     	<ul>
                         	<li><a href="5600.html">HP Indigo 5600</a></li>
                             <li><a href="7600.html">HP Indigo 7600</a></li>
+                            <li><a href="7800.html">HP Indigo 7800</a></li>
                             <li><a href="WS6600.html">HP Indigo WS6600</a></li>
+                            <li><a href="WS6800.html">HP Indigo WS6800</a></li>
                             <li><a href="30000.html">HP Indigo 30000</a></li>
                         </ul>
                     </div>
-                    <div class="seccion-segmento video" id="tendencias">
+                    <div class="seccion-segmento video vimeoWrap" id="tendencias">
                     	<iframe src="http://player.vimeo.com/video/84277769?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                     <div class="seccion-segmento video" id="videos">
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/aQ8NMH0jOXA" frameborder="0" allowfullscreen></iframe>
-                    </div><!-- videos -->
+                        <div id="player"></div>
+                    </div>
                 </div><!-- main_content -->
             </div><!-- content -->
             <div class="lightbox-container">
@@ -173,6 +175,17 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		lightboxImg();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'aQ8NMH0jOXA',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+            $('.video').fitVids();
+        }
+        stopVimeoSegmento();
 	</script>
 </body>
 </html>

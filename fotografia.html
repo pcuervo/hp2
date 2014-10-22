@@ -80,19 +80,20 @@
                         	<li><a href="3550.html">HP Indigo 3550</a></li>
                         	<li><a href="5600.html">HP Indigo 5600</a></li>
                             <li><a href="7600.html">HP Indigo 7600</a></li>
+                            <li><a href="7800.html">HP Indigo 7800</a></li>
                             <li><a href="10000.html">HP Indigo 10000</a></li>
                             <li><a href="W7250.html">HP Indigo W7250</a></li>
                         	<li><a href="WS6600p.html">HP Indigo WS6600p</a></li>
                         </ul>
                     </div><!-- seccion-segmento -->
 
-                    <div class="seccion-segmento video" id="tendencias">
+                    <div class="seccion-segmento video vimeoWrap" id="tendencias">
                     	<iframe src="http://player.vimeo.com/video/84277805?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <div class="seccion-segmento video" id="videos">
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/hRYXk9z-Hc4" frameborder="0" allowfullscreen></iframe>
-                    </div><!-- videos -->
+                        <div id="player"></div>
+                    </div>
 
                 </div><!-- main_content -->
             </div><!-- content -->
@@ -193,6 +194,17 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		lightboxImg();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'hRYXk9z-Hc4',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+            $('.video').fitVids();
+        }
+        stopVimeoSegmento();
 	</script>
 </body>
 </html>

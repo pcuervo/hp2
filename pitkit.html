@@ -93,13 +93,13 @@
                     <div class="link-prensa clearfix">
                         <p>Prensa(s) utilizada(s): </p>
                         <div class="clear"></div>
-                        <a href="WS6600.html">HP Indigo WS6000</a>
+                        <a href="WS6800.html">HP Indigo WS6000</a>
                     </div><!-- link-prensa -->
 
                 </div>
                 <div class="contenido-video">
                     <div class="frame-video">
-                        <iframe src="http://www.youtube.com/embed/IcBuGJj1u7I" frameborder="0" allowfullscreen></iframe>
+                        <div id="player"></div>
                     </div>
                 </div>
             </div><!-- content -->
@@ -180,6 +180,15 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		slider();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'IcBuGJj1u7I',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
 	</script>
 </body>
 </html>
