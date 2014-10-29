@@ -9,7 +9,6 @@
                 enviarFormaAJAX();
             } 
 		});	
-
 	});
 
 	function enviarFormaAJAX(){
@@ -21,15 +20,16 @@
             success:    function(data){
                 console.log(data);
                 var data_json = $.parseJSON(data);
-                alert("Gracias por registrarte " + data_json.nombre);
-                if(data_json.evento == 'canagraf')
+                $('form').after('<h4>Gracias por registrarte ' + data_json.nombre + '.</h4>');
+                $('form').empty();
+               /* if(data_json.evento == 'canagraf')
                     window.location = "canagraf.html";
                 else if(data_json.evento == 'ametiq')
                     window.location = "ametiq.html";
                 else if(data_json.evento == 'acoban')
                     window.location = "acoban.html";
                 else
-                    window.location = "registro.html";
+                    window.location = "registro.html";*/
             }
         });
 	}// enviarFormaAJAX
