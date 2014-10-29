@@ -12,6 +12,7 @@
 	} else if($evento == 'canagraf'){
 		// base registro canagraf 
 		$con=mysqli_connect("db537376937.db.1and1.com","dbo537376937","C@nagraf_123","db537376937");
+		$canal = $_POST['canal'];
 	} else if($evento == 'ametiq'){
 		// base registro ametiq 
 		$con=mysqli_connect("db537376955.db.1and1.com","dbo537376955","Amet!q_123","db537376955");
@@ -43,6 +44,7 @@
 	$empresa = $_POST['empresa'];
 	$razon = $_POST['razon'];
 	$rfc = $_POST['rfc'];
+
 	// Dirección
 	$calle = $_POST['calle'];
 	$num_ext = $_POST['num-ext'];
@@ -58,7 +60,12 @@
 		die('Error: ' . mysqli_error($con));
 	} 
 
-	$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC) VALUES ('".$empresa."', '".$razon."', '".$rfc."')";
+	if($evento == 'canagraf'){
+		$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC, F_Canal) VALUES ('".$empresa."', '".$razon."', '".$rfc."', '".$canal."')";
+	} else {
+		$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC) VALUES ('".$empresa."', '".$razon."', '".$rfc."')";
+	}
+	
 	if (!mysqli_query($con,$sqlEmpresa)){
 		die('Error: ' . mysqli_error($con));
 	}
