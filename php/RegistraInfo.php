@@ -12,6 +12,7 @@
 	} else if($evento == 'canagraf'){
 		// base registro canagraf 
 		$con=mysqli_connect("db537376937.db.1and1.com","dbo537376937","C@nagraf_123","db537376937");
+		$canal = $_POST['canal'];
 	} else if($evento == 'ametiq'){
 		// base registro ametiq 
 		$con=mysqli_connect("db537376955.db.1and1.com","dbo537376955","Amet!q_123","db537376955");
@@ -43,6 +44,7 @@
 	$empresa = $_POST['empresa'];
 	$razon = $_POST['razon'];
 	$rfc = $_POST['rfc'];
+
 	// Dirección
 	$calle = $_POST['calle'];
 	$num_ext = $_POST['num-ext'];
@@ -58,7 +60,12 @@
 		die('Error: ' . mysqli_error($con));
 	} 
 
-	$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC) VALUES ('".$empresa."', '".$razon."', '".$rfc."')";
+	if($evento == 'canagraf'){
+		$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC, F_Canal) VALUES ('".$empresa."', '".$razon."', '".$rfc."', '".$canal."')";
+	} else {
+		$sqlEmpresa = "INSERT INTO TB_Empresa(F_NomEmpresa, F_RazonSocial, F_RFC) VALUES ('".$empresa."', '".$razon."', '".$rfc."')";
+	}
+	
 	if (!mysqli_query($con,$sqlEmpresa)){
 		die('Error: ' . mysqli_error($con));
 	}
@@ -68,52 +75,6 @@
 		die('Error: ' . mysqli_error($con));
 	}
 	
-	echo json_encode(array('nombre' => $nombre));
-	
-	
-	/*
-	
-	// Regresa el ID del usuario
-	$query="SELECT F_IdUsuario FROM TB_Usuario ORDER BY F_IdUsuario DESC LIMIT 1";
-	$rUsuario=mysqli_query($con, $query );
-	
-	if($data = mysqli_fetch_array($rUsuario)) {
-		$idUsuario = $data[0];
-	}
-	// destinatario
-	$para  = $correo;
-	// subject
-	$folio = intval($idUsuario) + 50;
-	$titulo = '#'.$folio.' Gracias '.$nombre.' por registrarte en el BrandLabel Etimex';
-
-// message
-	$mensaje = '
-	<html>
-	<head>
-	  	<title>Etimex</title>
-	</head>
-	<body>
-		  <p>Número de registro: '.$folio.'</p>
-		  <p>Hola '.$nombre.',</p>
-		  <p>Se han registrado correctamente tus datos para asistir al evento Brand Label Etimex el Martes 18 de Marzo a las 8:30am en Cintermex en Monterrey.<p>
-		  <p>Por favor presenta este correo como confirmación de asistencia el día del evento.</p>
-		  <p>Cualquier duda, favor de comunicarse al (81) 8479 0800.</p>
-		  <p>¡Te esperamos!</p>
-		  <p>Atentamente,</p>
-		  <p>El equipo de Etimex y HP Indigo</p>
-	</body>
-	</html>';
-
-	// Para enviar un correo HTML mail, la cabecera Content-type debe fijarse
-	$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-	$cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-	$cabeceras .= 'From: Evento Etimex <info@etimex.com>' . "\r\n";
-	$cabeceras .= "Reply-To: guillermo@litobel.com\r\n";
-
-	
-	// Mail it
-	mail($para, $titulo, $mensaje, $cabeceras);
-	*/
-
+	echo json_encode(array('nombre' => $nombre, 'evento' => $evento));
 	
 ?>

@@ -4,12 +4,11 @@
 	if(empty($id)) 
 		header('Location: login.html ');
 	else {
-		$evento = $_GET['evento'];
 ?>
 <!doctype html>
 	<head>
 		<meta charset="utf-8">
-		<title>Registro HP Indigo</title>
+		<title>HP Indigo</title>
 		<link rel="stylesheet" href="registro.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<meta name="description" content="">
@@ -34,20 +33,42 @@
                     </div>
 
                     <img class="columna c-2 medium-3 small-4 right" src="images/hp_logo.png" alt="">
-
                 </div><!-- width clearfix -->
 
 			</header>
 
 			<div class="main">
-				<div id="registros" class="width clearfix">
-				</div><!-- registros -->
 
 				<div class="width clearfix">
 
-					<a class="columna c-3 small-12 boton" href="php/DescargaCSV.php?evento=<?php echo $evento; ?>">Descarga archivo</a>
+					<div class="renglon clearfix">
 
-				</div><!-- width -->
+						<div class="columna c-10 medium-12 center">
+							<h3>Selecciona el evento</h3>
+							<h4>Consulta de registrados al evento</h4>
+
+							<br />
+
+							<div class="columna c-3 medium-6">
+								<a href="consulta.php?evento=agc&id=<?php echo $id ?>" class="boton columna c-12">AGC Digital</a>
+							</div><!-- columna c-12 -->
+
+							<div class="columna c-3 medium-6">
+								<a href="consulta.php?evento=acoban&id=<?php echo $id ?>" class="boton columna c-12">Acoban</a>
+							</div><!-- columna c-12 -->
+
+							<div class="columna c-3 medium-6">
+								<a href="consulta.php?evento=ametiq&id=<?php echo $id ?>" class="boton columna c-12">Ametiq</a>
+							</div><!-- columna c-12 -->
+
+							<div class="columna c-3 medium-6">
+								<a href="consulta.php?evento=canagraf&id=<?php echo $id ?>" class="boton columna c-12">Canagraf</a>
+							</div><!-- columna c-12 -->
+
+						</div><!-- columna c-6 -->
+					</div>
+
+				</div><!-- width clearfix -->
 
 			</div><!-- main -->
 
@@ -60,31 +81,11 @@
 	</body>
 
 	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript">
-		$(document).ready(function(e) {
-			<?php
-				$url;
-				if($evento == 'acoban')
-					$url = 'php/MuestraRegistros.php?evento=acoban';
-				else if($evento == 'ametiq')
-					$url = 'php/MuestraRegistros.php?evento=ametiq';
-				else if($evento == 'canagraf')
-					$url = 'php/MuestraRegistros.php?evento=canagraf';
-				else 
-					$url = 'php/MuestraRegistros.php?evento=agc';
-			?>
-			var urlRegistros = <?php echo "'".$url."'"; ?>;
-            $.ajax({    //create an ajax request to load_page.php
-				type: "GET",
-				url: urlRegistros,
-				dataType: "html",   //expect html to be returned
-				success: function(response){
-				$("#registros").html(response);
-				//alert(response);
-				}
-			});
-        });
+    
+    <script>
+		//alert("val="+logged);
+		//var logged = getURLParameter("logged");
+		//alert("val="+logged);
 	</script>
 </html>
 <?php } ?>
-
