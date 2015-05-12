@@ -94,8 +94,8 @@
                 </div>
 
                 <div class="contenido-video">
-                    <div class="frame-video">
-                        <div id="player"></div>
+                    <div class="frame-video vimeoWrap">
+                       <iframe src="http://player.vimeo.com/video/127549162?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </div><!-- content -->
@@ -176,15 +176,7 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		slider();
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'Kx_VOJzpfBM',
-                events: {
-                    'onReady': onPlayerReady,
-                }
-            });
-        }
+        stopVimeoSegmento();
 	</script>
 </body>
 </html>
