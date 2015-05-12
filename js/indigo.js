@@ -457,7 +457,7 @@ $( document ).ready(function() {
 
 	function stopVimeoSegmento() {
 		$('#menu_segmentos a, .botones-historia a, .flecha-der-vid, .flecha-izq-vid, .control-slider-vid a, #stop').click(function(e) {
-			e.preventDefault();
+			//e.preventDefault();
 			$('.vimeoWrap').each( function(){
 				vimeoWrap = $(this);
 				vimeoWrap.html( vimeoWrap.html() );
