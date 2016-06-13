@@ -47,14 +47,25 @@
                         <li>
                             <a href="#" id="video">Video</a>
                         </li>
-                        <!-- <li>
-                        	<a href="pdf/7800.pdf" target="_new" id="descargar">Descargar ficha</a>
-                        </li> -->
+                        <li>
+                        	<a href="pdf/7900.pdf" target="_new" id="descargar">Descargar ficha</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="contenido-slider">
                 	<div class="slider">
-                    	<img src="images/7900.jpg" class="slider-item activo" id="1" />
+                    	<img src="images/7900-1.jpg" class="slider-item activo" id="1" />
+                        <img src="images/7900-2.jpg" class="slider-item" id="2" />
+                        <img src="images/7900-3.jpg" class="slider-item"  id="3" />
+                        <img src="images/7900-4.jpg" class="slider-item"  id="4" />
+                    	<a href="#" class="flecha-izq left"><img src="images/prev.png" alt="Previous"></a>
+                        <a href="#" class="flecha-der right"><img src="images/next.png" alt="Next"></a>
+                        <ul class="control-slider">
+                        	<li><a href="#" class="activo" id="control-1"></a></li>
+                            <li><a href="#" id="control-2"></a></li>
+                            <li><a href="#" id="control-3"></a></li>
+                            <li><a href="#" id="control-4"></a></li>
+                       	</ul>
                     </div>
                 </div>
                 <div class="contenido-beneficios">
@@ -114,7 +125,7 @@
                     	<h4>Especificaciones</h4>
                         <ul>
                         	<li>
-                            	<p><strong>Ciclo de trabajo mensual:</strong> 5 millones de páginas a color</p>
+                            	<p><strong>Ciclo de trabajo mensual:</strong> 5 millones de p&aacute;ginas a color</p>
                             </li>
                             <li>
                             	<p><strong>Velocidad de impresi&oacute;n: </strong> 120 ppm a 4 colores (A4, dos-arriba), 160 ppm en EPM (A4, dos-arriba), 240 ppm a 2 colores o monocromático (A4, dos-arriba).</p>
@@ -137,15 +148,15 @@
                         </ul>
                     </div>
                     <div class="left">
-                    	<h4>Prensas similares</h4>
+                        <!--<h4>Prensas similares</h4>
                         <ul>
                         	<li>
-                            	<a href="5900.html">HP Indigo 5900</a>
+                            	<a href="5600.html">HP Indigo 5600</a>
                             </li>
                             <li>
                             	<a href="10000.html">HP Indigo 10000</a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <h4>Segmento de especializaci&oacute;n</h4>
                         <ul>
                         	<li>
@@ -264,4 +275,4 @@
         }
 	</script>
 </body>
-</html>
+</html
