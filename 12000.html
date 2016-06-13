@@ -47,10 +47,9 @@
                         <li>
                             <a href="#" id="video">Video</a>
                         </li>
-                        <!--
                         <li>
-                            <a href="pdf/10000.pdf" target="_new" id="descargar">Descargar ficha</a>
-                        </li>-->
+                            <a href="pdf/12000.pdf" target="_new" id="descargar">Descargar ficha</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="contenido-slider">
@@ -174,16 +173,15 @@
             </div><!-- content -->
             <div class="lightbox-container">
                 <div class="lightbox-media">
-                    <!-- <div class="frame-video" id="yt-video">
-                        <div id="player"></div>
-                    </div> -->
-                    <video src="videos/12000.mp4" autoplay controls></video>
+                    <div class="frame-video" id="vimeoWrap">
+                        <iframe src="https://player.vimeo.com/video/170525813?&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div><!-- frame-video -->
                     <h2>HP Indigo 12000</h2>
                     <a href="#" id="stop">
                         <img src="images/cerrar.png" />
                     </a>
                 </div>
-            </div> <!-- lightbox -->
+            </div>
             <div class="menu-vertical right">
                 <ul>
                     <li>
@@ -261,15 +259,11 @@
     <script>
         slider();
         lightboxIFrame();
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'vl9-Jj4n858',
-                events: {
-                    'onReady': onPlayerReady
-                }
+        $(document).ready(function(e) {
+            $("#stop").click(function(){
+                stopVimeo();
             });
-        }
+        });
     </script>
 </body>
 </html>

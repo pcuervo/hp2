@@ -47,9 +47,9 @@
                         <li>
                             <a href="#" id="video">Video</a>
                         </li>
-                        <!-- <li>
-                        	<a href="pdf/7800.pdf" target="_new" id="descargar">Descargar ficha</a>
-                        </li> -->
+                        <li>
+                        	<a href="pdf/7900.pdf" target="_new" id="descargar">Descargar ficha</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="contenido-slider">
@@ -167,16 +167,14 @@
             </div><!-- content -->
             <div class="lightbox-container">
                 <div class="lightbox-media">
-                    <!-- <div class="frame-video" id="yt-video">
-                        <div id="player"></div>
-                    </div> -->
-                    <video src="videos/7900.mp4" autoplay controls></video>
+                    <div class="frame-video" id="vimeoWrap">
+                    <iframe src="https://player.vimeo.com/video/170524908?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>                    </div><!-- frame-video -->
                     <h2>HP Indigo 7900</h2>
-                    <a href="#">
-                        <img src="images/cerrar.png" id="stop" />
+                    <a href="#" id="stop">
+                        <img src="images/cerrar.png" />
                     </a>
                 </div>
-            </div> <!-- lightbox -->
+            </div>
             <div class="menu-vertical right">
                 <ul>
                     <li>
@@ -252,17 +250,13 @@
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
-		slider();
+        slider();
         lightboxIFrame();
-		var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'v9RpqmD_QF0',
-                events: {
-                    'onReady': onPlayerReady
-                }
+        $(document).ready(function(e) {
+            $("#stop").click(function(){
+                stopVimeo();
             });
-        }
-	</script>
+        });
+    </script>
 </body>
 </html>

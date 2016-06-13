@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#header {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-right: 10px;
+  }
+  
+.center {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#texto {
+	margin-top:0px;
+	text-align:center;
+}
+
+h1 {
+	font-family: 'BenchNine', sans-serif;
+	font-weight:700;
+	font-size:70px;
+	color:#9FB36A;
+	margin-top:0px;
+}
+
+h2 {
+	font-family: 'BenchNine', sans-serif;
+	font-weight:700;
+	font-size:30px;
+	color:#1E4B24;
+}
+
+h3 {
+	font-family: 'Muli', sans-serif;
+	font-weight:400;
+	font-size:18px;
+	color:#1E4B24;
+}
+
+p{
+	font-family: 'Muli', sans-serif;
+	font-weight:300;
+	font-size:16px;
+	color:#1E4B24;
+	margin-top:-20px;
+}
+
+h4{
+	font-family: 'BenchNine', sans-serif;
+	font-weight:400;
+	font-size:30px;
+	color:#FEFEFE;
+	margin-top:-25px;
+	text-align:center;
+}
+
+h5{
+	font-family: 'Muli', sans-serif;
+	font-weight:300;
+	font-size:10px;
+	color:#FEFEFE;
+	margin-top:-40px;
+	text-align:center;
+}
+
+#izquierda {
+	clear:both;
+	width:175px;
+	height:60px;
+	float:left;
+	margin-left:10px;
+}
+
+#enmedio {
+	width:580px;
+	height:60px;
+	float:left;
+}
+
+#derecha {
+	width:180px;
+	height:60px;
+	margin right:9px;
+	float:left;
+	margin-top:-10px;
+}
+
+#footer {
+	position:fixed;
+	/*list-style: none;
+	overflow: hidden;*/
+	width: 100%;
+	/*padding: 0;
+	margin: 0;
+	margin-right: -5px;
+	margin-bottom:-2PX;
+	margin-top:-150px;*/
+	z-index:-1;
+    bottom:0px;
+    left:0%;
+  }
+
+
+
+
+#derecha img {
+	margin-left: 5px;
+}
