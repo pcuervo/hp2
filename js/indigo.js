@@ -59,7 +59,7 @@ $( document ).ready(function() {
 
 	var menuAdicionales = $(".menu-adicionales ul");
 	if(menuAdicionales[0] != null) {
-		muestraInfoAdicionales("soluciones-graficas");
+		muestraInfoAdicionales("aurasma");
 		menuAdicionales[0].addEventListener("click", cambiaTabAdicionales, false);
 		jQuery('#indigo-env').fitVids();
 	}

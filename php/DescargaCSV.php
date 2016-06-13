@@ -34,10 +34,10 @@
 	header("Content-Type: text/csv;charset=UTF-8" );
 	
 	$handle = fopen($archivo, 'w');
-	$encabezado = array('Id', 'Nombre', 'Apellido paterno', 'Correo e.', utf8_decode('Teléfono'), 'Puesto', 'Empresa', utf8_decode('Razón Social'), 'RFC', 'Calle', 'Num. Ext.', 'Num. Int.', 'Colonia', 'Ciudad', utf8_decode('Delegación/Municipio'), 'Estado', 'C.P.');
+	$encabezado = array('Id', 'Nombre', 'Apellido paterno', 'Correo e.', utf8_decode('Teléfono'), 'Puesto', 'Empresa', utf8_decode('Razón Social'), 'RFC', 'Calle', 'Num. Ext.', 'Num. Int.', 'Colonia', 'Ciudad', utf8_decode('Delegación/Municipio'), 'Estado', 'C.P.', 'Canal de venta');
 	fputcsv($handle, $encabezado, ',', '"');
 	 
-	$sql = mysqli_query($con, 'SELECT U.F_IdUsuario, F_Nombre, F_ApePat, F_Correo, F_Telefono, F_Puesto, F_NomEmpresa, F_RazonSocial, F_RFC, F_Calle, F_NumExt, F_NumInt, F_Colonia, F_Ciudad, F_MunDel, F_Estado, F_CP FROM TB_Usuario U LEFT JOIN TB_Direccion D ON D.F_IdUsuario = U.F_IdUsuario LEFT JOIN TB_Empresa E ON E.F_IdUsuario = U.F_IdUsuario');
+	$sql = mysqli_query($con, 'SELECT U.F_IdUsuario, F_Nombre, F_ApePat, F_Correo, F_Telefono, F_Puesto, F_NomEmpresa, F_RazonSocial, F_RFC, F_Calle, F_NumExt, F_NumInt, F_Colonia, F_Ciudad, F_MunDel, F_Estado, F_CP, F_Canal FROM TB_Usuario U LEFT JOIN TB_Direccion D ON D.F_IdUsuario = U.F_IdUsuario LEFT JOIN TB_Empresa E ON E.F_IdUsuario = U.F_IdUsuario');
 
 	 
 	while($results = mysqli_fetch_array($sql)) {
@@ -58,7 +58,8 @@
 			utf8_decode($results[13]),
 			utf8_decode($results[14]),
 			utf8_decode($results[15]),
-			utf8_decode($results[16])
+			utf8_decode($results[16]),
+			utf8_decode($results[17])
 		);
 		
 		fputcsv($handle, $row, ',', '"');
