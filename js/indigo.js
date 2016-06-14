@@ -373,7 +373,7 @@ $( document ).ready(function() {
 
 	        $(".lightbox-container").css("display", "block");
 
-	        $(".lightbox-media a").click(function () {
+	        $(".lightbox-media #stop").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
 
@@ -449,10 +449,9 @@ $( document ).ready(function() {
 
 	// Videos Vimeo
 	function stopVimeo() {
-		$('.lightbox-media a').click(function() {
-	   		vimeoWrap = $('#vimeoWrap');
-	   		vimeoWrap.html( vimeoWrap.html() );
-		});
+		console.log('function');
+		vimeoWrap = $('#vimeoWrap');
+		vimeoWrap.html( vimeoWrap.html() );
 	}
 
 	function stopVimeoSegmento() {
