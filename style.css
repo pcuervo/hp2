@@ -366,8 +366,8 @@ header .instruccion { display: none; margin: 20px 0 10px 0; font-family: 'hp_reg
 			-webkit-border-bottom-left-radius: 15px;
 			-moz-border-radius-topright: 15px;
 			-moz-border-radius-bottomleft: 15px;}
-        .lightbox-media a { display:block; width:7%; margin-top: 12%; float:right;}
-            .lightbox-media a img { width:100%; height:auto;}
+        .lightbox-media button { display: block; width:7%; margin-top: 12%; padding: 0; border: none; background: none; float:right; }
+            .lightbox-media button img { width:100%; height:auto;}
         .lightbox-container .lightbox-media video { width:100%; height:auto;}
         .lightbox-container .frame-video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .lightbox-container .frame-video iframe{ height: 100% !important; position: absolute; top: 0; left: 0; width: 100%; }
